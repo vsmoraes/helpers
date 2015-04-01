@@ -48,4 +48,12 @@ class HelpersTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(date('d/m/Y'), format_data(date('Y-m-d')));
     }
 
+    public function testFilesizeFormat()
+    {
+        $this->assertEquals('1KB', filesize_format(1024));
+        $this->assertEquals('1MB', filesize_format(1024*1024));
+        $this->assertEquals('1GB', filesize_format(1024*1024*1024));
+        $this->assertEquals('1TB', filesize_format(1024*1024*1024*1024));
+    }
+
 }

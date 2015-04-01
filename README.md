@@ -24,42 +24,42 @@ composer require vsmoraes/helpers
 
 ## Funções disponívels
 
-### str_mask($string, $mask)
+#### str_mask($string, $mask)
 Aplica uma máscara à uma string
 
 ```php
 $telefone = str_mask('11999999999', '(##) #####-###'); // Resultado: (11) 99999-9999
 ```
 
-### format_cpf($cpf)
+#### format_cpf($cpf)
 Retorna a string formatada como CPF
 
 ```php
 $cpf = format_cpf('99999999999'); // Resultado: 999.999.999-99
 ```
 
-### format_cnpj($cnpj)
+#### format_cnpj($cnpj)
 Retorna a string formatada como CNPJ
 
 ```php
 $cnpj = format_cnpj('99999999999999'); // Resultado: 99.999.999/9999-99
 ```
 
-### format_cep($cep)
+#### format_cep($cep)
 Retorna a string formatada como CEP
 
 ```php
 $cep = format_cep('99999999'); // Resultado: 99999-999
 ```
 
-### format_telefone($telefone)
+#### format_telefone($telefone)
 Retorna a string formatada como telefone
 
 ```php
 $telefone = format_telefone('99999999999'); // Resultado: (99) 99999-9999
 ```
 
-### format_data($date, [$from_format = 'Y-m-d'], [$to_format = 'd/m/Y'])
+#### format_data($date, [$from_format = 'Y-m-d'], [$to_format = 'd/m/Y'])
 Converte o formato da data
 
 ```php
@@ -72,6 +72,14 @@ Você pode fazer a conversão inversa também (ou usar qualquer outro formato)
 ```php
 $date = '01/04/2015';
 $date = format_data($date, 'd/m/Y', 'Y-m-d'); // Resultado: 2015-04-01
+```
+
+#### filesize_format($bytes, [$precision = 2])
+Converte de bytes pra KB, MB, GB out TB
+
+```php
+$bytes = 230 * 1024; // 
+$filesize = filesize_format($bytes); // Resultado: 230KB
 ```
 
 ## Testes

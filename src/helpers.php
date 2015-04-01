@@ -90,10 +90,38 @@ if (! function_exists('format_data')) {
      * @param $date
      * @param $from_format
      * @param $to_format
-     * @return string
+     * @return string|null
      */
     function format_data($date, $from_format = 'Y-m-d', $to_format = 'd/m/Y')
     {
+        if (! $date) {
+            return null;
+        }
+
         return Carbon::createFromFormat($from_format, $date)->format($to_format);
+    }
+}
+
+if (! function_exists('filesize_format')) {
+
+    /**
+     * Convert from bytes
+     *
+     * @param $bytes
+     * @param $precision
+     * @return string
+     */
+    function filesize_format($bytes, $precision = 2)
+    {
+        $bytes = (float) $bytes;
+        $suffixes = array('B', 'KB', 'MB', 'GB', 'TB');
+
+        if ($bytes == 0) {
+            return round(0, $precision) . 'B';
+        }
+
+        $base = log($bytes) / log(1024);
+
+        return round(pow(1024, $base - floor($base)), $precision) . $suffixes[floor($base)];
     }
 }
