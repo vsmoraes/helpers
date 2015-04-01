@@ -48,6 +48,13 @@ Retorna a string formatada como CEP
 $cep = format_cep('99999999'); // Resultado: 99999-999
 ```
 
+### format_telefone($telefone)
+Retorna a string formatada como telefone
+
+```php
+$telefone = format_telefone('99999999999'); // Resultado: (99) 99999-9999
+```
+
 ## Testes
 ```php
 php vendor/bin/phpunit

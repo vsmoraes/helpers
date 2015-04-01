@@ -65,3 +65,17 @@ if (! function_exists('format_cep')) {
         return str_mask($cep, '#####-###');
     }
 }
+
+if (! function_exists('format_telefone')) {
+
+    /**
+     * Format the given string as phone number (Brazil)
+     *
+     * @param $telefone
+     * @return string
+     */
+    function format_telefone($telefone)
+    {
+        return str_mask($telefone, '(##) #####-####');
+    }
+}

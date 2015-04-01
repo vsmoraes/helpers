@@ -35,4 +35,12 @@ class HelpersTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($masked_string, format_cep($string));
     }
 
+    public function testFormatTelefone()
+    {
+        $string = '99999999999';
+        $masked_string = '(99) 99999-9999';
+
+        $this->assertEquals($masked_string, format_telefone($string));
+    }
+
 }
