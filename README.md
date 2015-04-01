@@ -1,4 +1,8 @@
 ## Common Helpers
+[![Build Status](https://api.travis-ci.org/vsmoraes/helpers.svg)](https://travis-ci.org/vsmoraes/helpers)
+[![Total Downloads](https://poser.pugx.org/vsmoraes/helpers/downloads.svg)](https://packagist.org/packages/vsmoraes/helpers)
+[![License](https://poser.pugx.org/vsmoraes/helpers/license.svg)](https://packagist.org/packages/vsmoraes/helpers)
+
 
 >> **Note:** This repository contains a set of functions that may help us, Brazilians, with common tasks, such date conversion and string masks. So, for now on, this documentation will be written in portuguese (pt_BR)
 
