@@ -42,4 +42,7 @@ $cnpj = format_cnpj('99999999999999'); // Resultado: 99.999.999/9999-99
 ```
 
 
-## Tes
+## Testes
+```php
+php vendor/bin/phpunit
+```
