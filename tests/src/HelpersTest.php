@@ -43,4 +43,9 @@ class HelpersTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($masked_string, format_telefone($string));
     }
 
+    public function testFormatData()
+    {
+        $this->assertEquals(date('d/m/Y'), format_data(date('Y-m-d')));
+    }
+
 }

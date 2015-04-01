@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Carbon;
+
 if (! function_exists('str_mask')) {
 
     /**
@@ -77,5 +79,21 @@ if (! function_exists('format_telefone')) {
     function format_telefone($telefone)
     {
         return str_mask($telefone, '(##) #####-####');
+    }
+}
+
+if (! function_exists('format_data')) {
+
+    /**
+     * Format the given date
+     *
+     * @param $date
+     * @param $from_format
+     * @param $to_format
+     * @return string
+     */
+    function format_data($date, $from_format = 'Y-m-d', $to_format = 'd/m/Y')
+    {
+        return Carbon::createFromFormat($from_format, $date)->format($to_format);
     }
 }

@@ -59,6 +59,21 @@ Retorna a string formatada como telefone
 $telefone = format_telefone('99999999999'); // Resultado: (99) 99999-9999
 ```
 
+### format_data($date, [$from_format = 'Y-m-d'], [$to_format = 'd/m/Y'])
+Converte o formato da data
+
+```php
+$date = '2015-04-01';
+$date = format_data($date); // Resultado: 01/04/2015
+```
+
+Você pode fazer a conversão inversa também (ou usar qualquer outro formato)
+
+```php
+$date = '01/04/2015';
+$date = format_data($date, 'd/m/Y', 'Y-m-d'); // Resultado: 2015-04-01
+```
+
 ## Testes
 ```php
 php vendor/bin/phpunit
