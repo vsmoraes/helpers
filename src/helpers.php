@@ -51,3 +51,17 @@ if (! function_exists('format_cnpj')) {
         return str_mask($cnpj, '##.###.###/####-##');
     }
 }
+
+if (! function_exists('format_cep')) {
+
+    /**
+     * Format the given string as mail code (Brazil)
+     *
+     * @param $cep
+     * @return string
+     */
+    function format_cep($cep)
+    {
+        return str_mask($cep, '#####-###');
+    }
+}

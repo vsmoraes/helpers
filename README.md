@@ -41,6 +41,12 @@ Retorna a string formatada como CNPJ
 $cnpj = format_cnpj('99999999999999'); // Resultado: 99.999.999/9999-99
 ```
 
+### format_cep($cep)
+Retorna a string formatada como CEP
+
+```php
+$cep = format_cep('99999999'); // Resultado: 99999-999
+```
 
 ## Testes
 ```php

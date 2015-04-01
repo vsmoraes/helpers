@@ -27,4 +27,12 @@ class HelpersTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($masked_string, format_cnpj($string));
     }
 
+    public function testFormatCep()
+    {
+        $string = '99999999';
+        $masked_string = '99999-999';
+
+        $this->assertEquals($masked_string, format_cep($string));
+    }
+
 }
